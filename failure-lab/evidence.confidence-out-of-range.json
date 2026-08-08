@@ -1,0 +1,25 @@
+{
+  "schema_version": "neuruh.evidence-envelope.v0.1",
+  "claim_id": "claim-synthetic-invalid-003",
+  "subject": "synthetic:artifact-invalid-003",
+  "status": "observed",
+  "value": {
+    "state": "seen"
+  },
+  "confidence": 1.25,
+  "evidence_refs": [
+    {
+      "source_type": "document",
+      "retrieved_at": "2026-08-08T12:30:02Z",
+      "content_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "citation": "Synthetic Invalid Example"
+    }
+  ],
+  "gaps": [],
+  "contradictions": [],
+  "producer": {
+    "id": "component.synthetic-verifier",
+    "version": "0.1.0"
+  },
+  "produced_at": "2026-08-08T12:30:03Z"
+}
