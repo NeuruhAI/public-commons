@@ -1,0 +1,23 @@
+{
+  "release_id": "002",
+  "release_candidate": "single-writer-spec",
+  "version": "0.1",
+  "release_class": "A_PUBLIC_COMMONS",
+  "approved_at": "2026-08-08T08:11:00-04:00",
+  "source_basis": "neutral extraction from repeated internal single-writer patterns",
+  "ownership_review": "approved_by_founder",
+  "license": "Apache-2.0",
+  "secret_data_scan": "pass",
+  "synthetic_fixtures_only": true,
+  "private_topology_excluded": true,
+  "production_authority_map_excluded": true,
+  "schema_parse": "pass",
+  "public_private_boundary_review": "pass",
+  "publication_status": "approved_for_public_release",
+  "repository_visibility": "inherits_neuruh-public-commons",
+  "known_limitations": [
+    "specification does not implement authentication, locking, or transaction isolation",
+    "writer identity is declarative and must be enforced by an implementation",
+    "no private Neuruh writer assignments are included"
+  ]
+}
