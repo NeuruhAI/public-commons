@@ -1,0 +1,29 @@
+{
+  "schema_version": "neuruh.failure-lab.v0.1",
+  "fixtures": [
+    {
+      "path": "single-writer.missing-writer.json",
+      "contract": "schemas/single-writer.v0.1.schema.json",
+      "expected": "reject",
+      "reason": "required property writer is missing"
+    },
+    {
+      "path": "evidence.supported-no-evidence.json",
+      "contract": "schemas/evidence-envelope.v0.1.schema.json",
+      "expected": "reject",
+      "reason": "supported status requires at least one evidence reference"
+    },
+    {
+      "path": "evidence.abstained-with-value.json",
+      "contract": "schemas/evidence-envelope.v0.1.schema.json",
+      "expected": "reject",
+      "reason": "abstained status requires value to be null"
+    },
+    {
+      "path": "evidence.confidence-out-of-range.json",
+      "contract": "schemas/evidence-envelope.v0.1.schema.json",
+      "expected": "reject",
+      "reason": "confidence must be between 0 and 1"
+    }
+  ]
+}
