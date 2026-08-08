@@ -1,0 +1,11 @@
+{
+  "schema_version": "neuruh.single-writer.v0.1",
+  "domains": {
+    "synthetic_state": {
+      "consumers": [
+        "component.synthetic-reader"
+      ],
+      "restriction": "This fixture is invalid because writer is intentionally omitted."
+    }
+  }
+}
