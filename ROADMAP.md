@@ -4,7 +4,7 @@
 
 - [x] Agent Receipt specification and verifier
 - [x] Public/private release rules
-- [ ] Synthetic failure fixtures
+- [x] Synthetic failure fixtures
 
 ## Wave 02 — Reliability contracts
 
