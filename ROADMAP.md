@@ -1,27 +1,27 @@
 # Roadmap
 
-## Wave 01
+## Wave 01 — Launch surface
 
-- Agent Receipt specification and verifier
-- Public/private release rules
-- Synthetic failure fixtures
+- [x] Agent Receipt specification and verifier
+- [x] Public/private release rules
+- [ ] Synthetic failure fixtures
 
-## Wave 02
+## Wave 02 — Reliability contracts
 
-- Single-Writer contract
-- Evidence Envelope
-- Capability Registry
+- [ ] Single-Writer contract
+- [ ] Evidence Envelope
+- [ ] Capability Registry
 
-## Wave 03
+## Wave 03 — Reference execution
 
-- Local sovereign agent starter
-- Connector contract testing
-- Reduced Policy Gate Lite
+- [ ] Local sovereign agent starter
+- [ ] Connector contract testing
+- [ ] Reduced Policy Gate Lite
 
 ## Explicitly not planned for public release
 
-- proprietary routing;
-- vertical decision intelligence;
-- private corpora;
-- production authority;
-- complete Neuruh integration.
+- proprietary routing and orchestration;
+- vertical decision and scoring intelligence;
+- private corpora or customer-derived datasets;
+- production authority or mutation controls;
+- complete private runtime integration.
