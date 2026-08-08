@@ -2,8 +2,7 @@
 
 **Open the rails. Protect the routing intelligence.**
 
-Neuruh Public Commons is the public reliability layer around a protected
-private agentic system.
+Neuruh Public Commons is the public reliability layer around a protected private agentic system.
 
 The project publishes narrow, useful, inspectable infrastructure for:
 
@@ -16,8 +15,7 @@ The project publishes narrow, useful, inspectable infrastructure for:
 - local-first operation;
 - public/private boundary enforcement.
 
-It does not publish Neuruh's production routing, private data, commercial
-recipes, vertical intelligence, trust configuration, or integrated organism.
+It does not publish production routing, private data, commercial recipes, vertical intelligence, trust configuration, privileged connectors, or the integrated private runtime.
 
 ## Release doctrine
 
@@ -41,9 +39,9 @@ Public artifacts must be:
 | D | Crown Jewels | Never public |
 | U | Unknown | Private until reviewed |
 
-## Initial release sequence
+## Release sequence
 
-1. Neuruh Agent Receipt
+1. `neuruh-agent-receipt` — v0.1.0 release prepared and approved
 2. Neuruh Single Writer
 3. Neuruh Evidence Envelope
 4. Neuruh Agent Failure Lab
@@ -52,7 +50,9 @@ Public artifacts must be:
 
 ## Status
 
-**Private staging candidate. Not yet publicly released.**
+**Active Alpha — Public Commons control repository.**
+
+This repository defines the release boundary and index for public Neuruh infrastructure. Individual projects remain separately versioned and independently testable.
 
 See:
 
@@ -62,3 +62,8 @@ See:
 - `DATA_RELEASE_POLICY.md`
 - `STATUS_VOCABULARY.md`
 - `ROADMAP.md`
+- `RELEASE_REGISTRY.md`
+
+## License
+
+Apache License 2.0. See `LICENSE`.
