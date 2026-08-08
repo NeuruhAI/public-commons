@@ -1,0 +1,21 @@
+{
+  "release_candidate": "neuruh-public-commons",
+  "version": "0.1.0",
+  "release_class": "A_PUBLIC_COMMONS",
+  "approved_at": "2026-08-08T08:11:00-04:00",
+  "ownership_review": "approved_by_founder",
+  "license": "Apache-2.0",
+  "secret_keyword_scan": "pass",
+  "data_release_policy": "pass",
+  "public_private_boundary_review": "pass",
+  "private_architecture_disclosure_review": "pass_after_generalization",
+  "security_policy": "pass",
+  "code_execution_surface": "none_documentation_control_repository",
+  "publication_status": "approved_for_public_release",
+  "repository_visibility": "pending_public_visibility_change",
+  "known_limitations": [
+    "alpha governance documents may evolve",
+    "release registry records approval state but does not replace per-project testing",
+    "unknown ownership or sensitivity defaults to private"
+  ]
+}
