@@ -1,0 +1,26 @@
+{
+  "release_id": "004",
+  "release_candidate": "agent-failure-lab",
+  "version": "0.1",
+  "release_class": "A_PUBLIC_COMMONS",
+  "approved_at": "2026-08-08T08:11:00-04:00",
+  "ownership_review": "approved_by_founder",
+  "license": "Apache-2.0",
+  "secret_data_scan": "pass",
+  "synthetic_fixtures_only": true,
+  "execution_surface": "none_fixture_pack_only",
+  "validation": {
+    "status": "pass",
+    "fixtures": 4,
+    "expected_rejections_observed": 4,
+    "unexpected_passes": 0
+  },
+  "public_private_boundary_review": "pass",
+  "publication_status": "approved_for_public_release",
+  "repository_visibility": "inherits_neuruh-public-commons",
+  "known_limitations": [
+    "v0.1 covers only the currently published Single-Writer and Evidence Envelope contracts",
+    "fixtures test contract rejection, not runtime security or production authorization",
+    "all examples are intentionally synthetic"
+  ]
+}
