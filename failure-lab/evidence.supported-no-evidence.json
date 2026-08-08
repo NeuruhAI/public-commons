@@ -1,0 +1,18 @@
+{
+  "schema_version": "neuruh.evidence-envelope.v0.1",
+  "claim_id": "claim-synthetic-invalid-001",
+  "subject": "synthetic:artifact-invalid-001",
+  "status": "supported",
+  "value": {
+    "state": "ready"
+  },
+  "confidence": 0.8,
+  "evidence_refs": [],
+  "gaps": [],
+  "contradictions": [],
+  "producer": {
+    "id": "component.synthetic-verifier",
+    "version": "0.1.0"
+  },
+  "produced_at": "2026-08-08T12:30:00Z"
+}
