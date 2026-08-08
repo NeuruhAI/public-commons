@@ -1,0 +1,20 @@
+{
+  "schema_version": "neuruh.single-writer.v0.1",
+  "domains": {
+    "artifact_index": {
+      "writer": "component.catalog",
+      "consumers": [
+        "component.search",
+        "component.ui"
+      ],
+      "restriction": "Only the catalog component may mutate the canonical artifact index."
+    },
+    "payment_approval": {
+      "writer": "human.operator",
+      "consumers": [
+        "component.checkout"
+      ],
+      "restriction": "Software may prepare a request but final approval remains human-owned."
+    }
+  }
+}
