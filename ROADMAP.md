@@ -8,8 +8,8 @@
 
 ## Wave 02 — Reliability contracts
 
-- [ ] Single-Writer contract
-- [ ] Evidence Envelope
+- [x] Single-Writer contract
+- [x] Evidence Envelope
 - [ ] Capability Registry
 
 ## Wave 03 — Reference execution

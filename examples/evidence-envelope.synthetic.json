@@ -1,0 +1,26 @@
+{
+  "schema_version": "neuruh.evidence-envelope.v0.1",
+  "claim_id": "claim-synthetic-001",
+  "subject": "synthetic:artifact-001",
+  "status": "supported",
+  "value": {
+    "state": "ready"
+  },
+  "confidence": 0.92,
+  "evidence_refs": [
+    {
+      "source_type": "document",
+      "retrieved_at": "2026-08-08T12:00:00Z",
+      "content_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "citation": "Synthetic Example §1"
+    }
+  ],
+  "gaps": [],
+  "contradictions": [],
+  "producer": {
+    "id": "component.synthetic-verifier",
+    "version": "0.1.0"
+  },
+  "input_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "produced_at": "2026-08-08T12:00:01Z"
+}
