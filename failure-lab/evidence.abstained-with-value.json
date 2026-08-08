@@ -1,0 +1,20 @@
+{
+  "schema_version": "neuruh.evidence-envelope.v0.1",
+  "claim_id": "claim-synthetic-invalid-002",
+  "subject": "synthetic:artifact-invalid-002",
+  "status": "abstained",
+  "value": {
+    "state": "guessed"
+  },
+  "confidence": null,
+  "evidence_refs": [],
+  "gaps": [
+    "synthetic_missing_source"
+  ],
+  "contradictions": [],
+  "producer": {
+    "id": "component.synthetic-verifier",
+    "version": "0.1.0"
+  },
+  "produced_at": "2026-08-08T12:30:01Z"
+}
