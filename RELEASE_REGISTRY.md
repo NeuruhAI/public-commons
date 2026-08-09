@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Outcome Calibration Ledger
-2. Neuruh Reversibility Contract
+1. Neuruh Learning Update Proposal
+2. Neuruh Promotion Gate
 
 ## Registration rule
 
@@ -27,10 +27,10 @@ bounded, independently runnable reference components.
 
 ### 005 — Neuruh Governed Exec
 
-**Repository:** https://github.com/NeuruhAI/neuruh-governed-exec  
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-governed-exec
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 8/8 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A fail-closed governed command-execution primitive using exact executable +
@@ -42,10 +42,10 @@ authority topology, private policies and Neuruh production runtime integration.
 
 ### 006 — Neuruh Policy Gate
 
-**Repository:** https://github.com/NeuruhAI/neuruh-policy-gate  
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-policy-gate
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 7/7 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A deterministic ALLOW / DENY / ESCALATE action-policy boundary with blocked
@@ -57,10 +57,10 @@ commercial rules and production routing intelligence.
 
 ### 007 — Neuruh Capability Registry
 
-**Repository:** https://github.com/NeuruhAI/neuruh-capability-registry  
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-capability-registry
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 7/7 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A typed capability manifest and fail-closed validator for declaring operations,
@@ -71,10 +71,10 @@ real authority topology and privileged production capabilities.
 
 ### 008 — Neuruh Inference Health
 
-**Repository:** https://github.com/NeuruhAI/neuruh-inference-health  
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-inference-health
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 7/7 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A provider-neutral health adapter for local-first and mixed inference stacks,
@@ -112,10 +112,10 @@ agent run and a runnable sovereign reference agent.
 
 ### 009 — Neuruh Agent Run Manifest
 
-**Repository:** https://github.com/NeuruhAI/neuruh-agent-run-manifest  
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-agent-run-manifest
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 20/20 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A deterministic, content-bound manifest for governed agent runs. It binds
@@ -134,10 +134,10 @@ and private connectors.
 
 ### 010 — Neuruh Sovereign Agent Starter
 
-**Repository:** https://github.com/NeuruhAI/neuruh-sovereign-agent-starter  
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-sovereign-agent-starter
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 22/22 tests PASS; synthetic governed E2E PASS; generated Release 009 manifest independently validates; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A runnable governed-agent reference stack composed from Agent Receipt,
@@ -179,10 +179,10 @@ connector contract-testing primitive to the Public Commons.
 
 ### 011 — Neuruh Evidence Ledger
 
-**Repository:** https://github.com/NeuruhAI/neuruh-evidence-ledger  
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-evidence-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 28/28 tests PASS; Wave 04 composition E2E PASS; final Git-history gitleaks PASS; wheel build PASS; CLI smoke PASS; Apache-2.0; release receipt present.
 
 An append-only, tamper-evident ledger for evidence objects and their
@@ -198,10 +198,10 @@ confidence calibration and private routing intelligence.
 
 ### 012 — Neuruh Connector Contract Kit
 
-**Repository:** https://github.com/NeuruhAI/neuruh-connector-contract-kit  
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
-**Class:** A — Public Commons  
-**Status:** Public / Active Alpha  
+**Repository:** https://github.com/NeuruhAI/neuruh-connector-contract-kit
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
 **Qualification:** 29/29 tests PASS; Wave 04 composition E2E PASS; final Git-history gitleaks PASS; wheel build PASS; CLI smoke PASS; Apache-2.0; release receipt present.
 
 A portable fail-closed contract-testing framework for connectors.
@@ -320,3 +320,57 @@ A fail-closed authority contract binding principal, delegate, authority classes,
 - **Synthetic fixtures only**
 - **No private organism implementation exported**
 
+---
+
+## Release Wave 07 — Calibration + Reversibility
+
+Wave 07 closes two critical trust loops: it records whether pre-outcome probability forecasts were calibrated after outcomes arrive, and it requires reversibility/compensation claims to be declared before execution.
+
+### 017 — Neuruh Outcome Calibration Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-outcome-calibration-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 57/57 tests PASS; exact public Wave 07 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+An append-only, tamper-evident calibration ledger that binds a genuinely pre-outcome probability forecast to the later Decision Receipt and observed outcome. It deterministically recomputes Brier score, absolute error, probability bucket, ledger chain/tip and aggregate calibration summaries.
+
+Critical boundary: calibration evidence can measure error but cannot modify models, policies, thresholds, routing, capabilities or authority.
+
+**Private exclusions:** proprietary scoring, model weights, customer outcomes, domain-specific labels, calibration thresholds, policy promotion rules, model selection, production memory and routing.
+
+### 018 — Neuruh Reversibility Contract
+
+**Repository:** https://github.com/NeuruhAI/neuruh-reversibility-contract
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 54/54 tests PASS; exact public Wave 07 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A content-bound pre-execution contract classifying an action as reversible, compensatable or irreversible. It binds exact forward action/state, reversal or compensation capability and plan, time window, authority class, approval requirements, dependencies, verification requirements and bounded attempts.
+
+Critical boundary: the contract validates whether a declared reversal/compensation path remains eligible; it never executes that path.
+
+**Private exclusions:** production rollback commands, production state stores, credentials, infrastructure topology, real authority routing, private connectors, customer state and commercial recovery logic.
+
+### Wave 07 aggregate qualification
+
+- **111/111 unit tests PASS**
+- **017: 57/57 PASS**
+- **018: 54/54 PASS**
+- **Exact public 006 → 013 → 016 → 014 → 018 → 015 → 017 → 009 composition E2E PASS**
+- **Prediction digest proven sealable before final Decision Receipt/outcome**
+- **Delegation authorization PASS**
+- **Pre-approval block PASS; exact post-approval authorization PASS**
+- **Reversal eligibility against exact action/post-state PASS**
+- **Calibration Brier/error recomputation PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 07 adds measurable post-outcome calibration and pre-execution reversibility while preserving the rule that evidence does not acquire authority.
