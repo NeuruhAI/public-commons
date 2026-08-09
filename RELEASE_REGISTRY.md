@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Canary Evaluation Ledger
-2. Neuruh Rollback Receipt
+1. Neuruh Deployment Authorization Contract
+2. Neuruh Stage Transition Receipt
 
 ## Registration rule
 
@@ -431,3 +431,62 @@ Critical boundary: PROMOTE means eligible to progress to the requested lifecycle
 - **No private organism implementation exported**
 
 Wave 08 establishes a bounded learning loop: measure error, propose change, obtain independent prerequisites, and evaluate lifecycle eligibility without self-modification or autonomous deployment.
+
+
+---
+
+## Release Wave 09 — Canary Evaluation + Rollback Evidence
+
+Wave 09 closes the canary failure/recovery loop with deterministic evaluation evidence and a content-bound rollback receipt while keeping evaluation and evidence separate from execution authority.
+
+### 021 — Neuruh Canary Evaluation Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-canary-evaluation-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 56/56 tests PASS; exact public Wave 09 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+An append-only tamper-evident ledger binding the exact proposal, Promotion Gate decision, candidate/baseline digests, canary exposure, sample count, metrics, incidents and a deterministic PASS / HOLD / ROLLBACK verdict.
+
+Critical boundary: canary evaluation evidence hard-codes `deployment_authority=false`. A PASS verdict does not deploy or promote anything, and a ROLLBACK verdict does not authorize rollback execution.
+
+**Private exclusions:** production traffic routing, real canary metrics, private thresholds, customer data, release policy, deployment topology and production incident systems.
+
+### 022 — Neuruh Rollback Receipt
+
+**Repository:** https://github.com/NeuruhAI/neuruh-rollback-receipt
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 43/43 tests PASS; exact public Wave 09 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound receipt binding proposal, promotion, canary evidence, the predeclared reversibility contract, separate human rollback approval, pre-state, exact restoration target, rollback execution evidence, post-state and verification evidence.
+
+Critical boundary: the receipt records externally governed rollback evidence and hard-codes `execution_authority=false`. A SUCCEEDED direct rollback requires the post-state digest to equal the exact declared restoration target.
+
+**Private exclusions:** production rollback commands, infrastructure state, credentials, production authority routing, customer state, private connectors and commercial recovery logic.
+
+### Wave 09 aggregate qualification
+
+- **99/99 unit tests PASS**
+- **021: 56/56 PASS**
+- **022: 43/43 PASS**
+- **Exact public 019 → 018 → 014 → 020 → 021 → 018 → 014 → 022 → 015 → 009 composition E2E PASS**
+- **Promotion lifecycle eligibility retains deployment_authority=false PASS**
+- **Canary critical failure deterministically returns ROLLBACK PASS**
+- **Canary evaluation retains deployment_authority=false PASS**
+- **Exact Reversibility Contract eligibility PASS**
+- **Separate rollback human approval PASS**
+- **Rollback exact restoration target verification PASS**
+- **Rollback Receipt retains execution_authority=false PASS**
+- **Decision Receipt + Agent Run Manifest binding PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 09 makes failure recovery auditable without letting evaluation or receipt evidence become deployment or rollback authority.
