@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh State Drift Ledger
-2. Neuruh Reconciliation Proposal
+1. Neuruh Reconciliation Authorization Contract
+2. Neuruh Reconciliation Receipt
 
 ## Registration rule
 
@@ -673,3 +673,60 @@ Critical boundary: the envelope hard-codes `deployment_authority=false`, `execut
 - **No private organism implementation exported**
 
 Wave 12 turns execution intent and state observation into first-class, independently verifiable public evidence without transferring deployment, execution or canonical-state authority into those evidence objects.
+
+
+---
+
+## Release Wave 13 — State Drift + Reconciliation Proposals
+
+Wave 13 closes the observed-state drift loop without granting remediation authority: it records deterministic divergence between canonical and attested state, then produces a bounded reconciliation proposal that must pass separate approval and authorization before any mutation.
+
+### 029 — Neuruh State Drift Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-state-drift-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 60/60 tests PASS; exact public Wave 13 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+An append-only tamper-evident ledger comparing an exact Release 026 canonical lifecycle entry with an exact Release 028 state attestation and deterministically deriving stage drift, state drift and `in_sync | drifted` status.
+
+Critical boundary: drift evidence hard-codes `deployment_authority=false`, `execution_authority=false` and `canonical_state_authority=false`. It records divergence but cannot reconcile or mutate canonical state.
+
+### 030 — Neuruh Reconciliation Proposal
+
+**Repository:** https://github.com/NeuruhAI/neuruh-reconciliation-proposal
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 62/62 tests PASS; exact public Wave 13 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound proposal for one exact Release 029 drift entry with `restore_canonical`, `adopt_observed`, or `hold_manual_review`. Mutation proposals bind authority class, capability and reversibility evidence; every mode requires explicit approval.
+
+Critical boundary: proposals hard-code `approval_required=true`, `deployment_authority=false`, `execution_authority=false` and `canonical_state_authority=false`. Release 030 cannot approve, authorize, execute or mutate Release 026.
+
+### Wave 13 aggregate qualification
+
+- **122/122 unit tests PASS**
+- **029: 60/60 PASS**
+- **030: 62/62 PASS**
+- **Exact public 026 → 028 → 029 → 030 → 015 → 009 composition E2E PASS**
+- **028 periodic attestation mismatch becomes explicit 029 drift evidence PASS**
+- **029 deterministic stage/state drift classification PASS**
+- **029 attestation replay / broken-chain / contradiction rejection PASS**
+- **030 restore-canonical / adopt-observed / hold-manual-review semantics PASS**
+- **030 actual drift required PASS**
+- **030 explicit approval required PASS**
+- **030 mutating modes require reversibility evidence PASS**
+- **030 stale canonical/drift binding rejection PASS**
+- **015 records escalation with blocked execution and pending outcome PASS**
+- **009 seals evidence/proposal custody PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 13 makes state drift measurable and response proposals auditable while preserving the boundary that observation and recommendation do not become authority.
