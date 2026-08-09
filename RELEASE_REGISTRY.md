@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Evidence Ledger
-2. Neuruh Connector Contract Kit
+1. Neuruh Decision Explainability
+2. Neuruh Human Approval Checkpoint
 
 ## Registration rule
 
@@ -169,4 +169,66 @@ routing, private prompts/policies/memory and proprietary scoring.
 
 Wave 03 advances the Public Commons from standalone runnable primitives into
 a composed governed reference runtime.
+
+---
+
+## Release Wave 04 — Evidence + Connector Contracts
+
+Wave 04 adds a tamper-evident evidence custody primitive and a fail-closed
+connector contract-testing primitive to the Public Commons.
+
+### 011 — Neuruh Evidence Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-evidence-ledger  
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
+**Class:** A — Public Commons  
+**Status:** Public / Active Alpha  
+**Qualification:** 28/28 tests PASS; Wave 04 composition E2E PASS; final Git-history gitleaks PASS; wheel build PASS; CLI smoke PASS; Apache-2.0; release receipt present.
+
+An append-only, tamper-evident ledger for evidence objects and their
+provenance/custody graph.
+
+It preserves sequence, content hashes, provenance, contradictions,
+derivation, supersession and ledger-tip integrity while keeping evidence
+separate from execution/governance authority.
+
+**Private exclusions:** production evidence stores, private datasets,
+customer data, credentials, production source topology, proprietary
+confidence calibration and private routing intelligence.
+
+### 012 — Neuruh Connector Contract Kit
+
+**Repository:** https://github.com/NeuruhAI/neuruh-connector-contract-kit  
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
+**Class:** A — Public Commons  
+**Status:** Public / Active Alpha  
+**Qualification:** 29/29 tests PASS; Wave 04 composition E2E PASS; final Git-history gitleaks PASS; wheel build PASS; CLI smoke PASS; Apache-2.0; release receipt present.
+
+A portable fail-closed contract-testing framework for connectors.
+
+It mechanically validates declared operations, inputs, outputs, side effects,
+network requirements, allowed hosts, authentication declarations, timeouts,
+retry bounds, idempotency and evidence/receipt requirements using synthetic
+adapters.
+
+**Private exclusions:** production Neuruh connectors, credentials, production
+endpoints, DeedSonar/LandOS private APIs, connector routing, customer data and
+production authority topology.
+
+### Wave 04 aggregate qualification
+
+- **57/57 unit tests PASS**
+- **011: 28/28 PASS**
+- **012: 29/29 PASS**
+- **012 → 011 → exact public 009 composition E2E PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 04 extends the governed reference runtime with evidence custody and
+connector-boundary verification.
 
