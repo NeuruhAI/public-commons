@@ -6,13 +6,13 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 |---|---|---:|---|---|---|
 | 001 | `NeuruhAI/agent-receipt` | 0.1.0 | A — Public Commons | Public / Active Alpha | Portable tamper-evident agent receipt specification and verifier |
 | 002 | `specs/SINGLE_WRITER_SPEC.md` | 0.1 | A — Public Commons | Public / Active Alpha | Single authoritative writer contract for canonical mutable domains |
-| 003 | `specs/EVIDENCE_ENVELOPE_SPEC.md` | 0.1 | A — Public Commons | Public / Active Alpha | Portable evidence, provenance, contradiction, uncertainty, and abstention envelope |
+| 003 | `specs/EVIDENCE_ENVELOPE_SPEC.md` | 0.1 | A — Public Commons | Portable evidence, provenance, contradiction, uncertainty, and abstention envelope |
 | 004 | `failure-lab/` | 0.1 | A — Public Commons | Public / Active Alpha | Synthetic negative-test pack proving invalid contract states are rejected |
 
 ## Queue
 
-1. Neuruh Execution Intent Manifest
-2. Neuruh State Attestation Envelope
+1. Neuruh State Drift Ledger
+2. Neuruh Reconciliation Proposal
 
 ## Registration rule
 
@@ -610,3 +610,66 @@ Critical boundary: lifecycle state evidence hard-codes `execution_authority=fals
 - **No private organism implementation exported**
 
 Wave 11 turns single-use authorization into auditable retirement and turns lifecycle position into explicit canonical state without exporting the production coordination machinery.
+
+
+---
+
+## Release Wave 12 — Execution Intent + State Attestation
+
+Wave 12 makes two previously opaque evidence links explicit: it turns the authorization-consumption `execution_intent_digest` into a concrete pre-execution manifest, and it turns post-transition state verification into a content-bound expected-vs-observed attestation before canonical lifecycle state advances.
+
+### 027 — Neuruh Execution Intent Manifest
+
+**Repository:** https://github.com/NeuruhAI/neuruh-execution-intent-manifest
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 72/72 tests PASS; exact public Wave 12 composition E2E PASS; authorization-window containment PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound pre-execution manifest binding the exact Release 023 authorization to one run/action/target/actor/capability, one adjacent lifecycle transition, exact pre/target state, prerequisite governance evidence, hashed input/context, deterministic idempotency key, authorization use index zero, one execution attempt and an execution window fully contained by the parent authorization window.
+
+Critical boundary: the intent hard-codes `deployment_authority=false` and `execution_authority=false`. Release 023 remains the authority-bearing artifact. Release 027 describes exactly what that authority will be consumed for; it does not authorize or execute anything.
+
+**Private exclusions:** executable commands, production connector graph, credentials, deployment endpoints, actor identity proof, private context/input payloads, production state and executor implementation.
+
+### 028 — Neuruh State Attestation Envelope
+
+**Repository:** https://github.com/NeuruhAI/neuruh-state-attestation-envelope
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 55/55 tests PASS; exact public Wave 12 composition E2E PASS; expected-vs-observed mismatch rejection PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound state evidence envelope binding target/stage, expected and observed state digests, observation evidence, observer/timestamp, Release 023 authorization, Release 027 execution intent and Release 024 transition receipt. It deterministically records `match`, `mismatch` or `uncompared`.
+
+Critical boundary: the envelope hard-codes `deployment_authority=false`, `execution_authority=false` and `canonical_state_authority=false`. The composed gate must verify an exact post-transition MATCH before supplying the attestation digest to Release 026 as canonical-state source evidence. Release 026 and 028 remain independently reusable packages and do not silently import each other.
+
+**Private exclusions:** production state probes, observer authentication, credentials, infrastructure topology, private state payloads, customer data, deployment/rollback implementation and production state stores.
+
+### Wave 12 aggregate qualification
+
+- **127/127 unit tests PASS**
+- **027: 72/72 PASS**
+- **028: 55/55 PASS**
+- **Exact public 023 → 027 → 025 → 024 → 028 → 026 → 015 → 009 composition E2E PASS**
+- **023 remains exact single-use deployment_authority=true PASS**
+- **027 exact authorization tuple binding PASS**
+- **027 execution window contained inside 023 authorization window PASS**
+- **027 deployment_authority=false and execution_authority=false PASS**
+- **025 consumes the exact immutable 027 intent digest PASS**
+- **025 authorization replay rejection PASS**
+- **024 exact externally governed transition receipt PASS**
+- **028 exact expected-vs-observed MATCH verification PASS**
+- **028 mismatched state blocked before canonical 026 append PASS**
+- **028 canonical_state_authority=false PASS**
+- **026 canonical current stage/state PASS**
+- **Decision Receipt + Agent Run Manifest binding PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 12 turns execution intent and state observation into first-class, independently verifiable public evidence without transferring deployment, execution or canonical-state authority into those evidence objects.
