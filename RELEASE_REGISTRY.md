@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Decision Receipt
-2. Neuruh Authority Delegation Contract
+1. Neuruh Outcome Calibration Ledger
+2. Neuruh Reversibility Contract
 
 ## Registration rule
 
@@ -267,6 +267,51 @@ A fail-closed human approval record bound to exact run/action identity, decision
 - **74/74 unit tests PASS**
 - **Exact public 006 Policy Gate → 013 → 014 → 009 Agent Run Manifest composition E2E PASS**
 - **Pre-approval authorization blocked; exact post-approval state authorized**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+---
+
+## Release Wave 06 — Decision Receipts + Delegated Authority
+
+Wave 06 binds the complete auditable anatomy of one governed decision and adds a mechanically bounded authority delegation contract.
+
+### 015 — Neuruh Decision Receipt
+
+**Repository:** https://github.com/NeuruhAI/neuruh-decision-receipt
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 45/45 tests PASS; exact public Wave 06 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound receipt spanning identity, evidence, declared reasoning artifacts, governance, execution, economics and outcome. It references Decision Explainability, Human Approval, Authority Delegation and optional Agent Receipt hashes without conflating evidence with authority.
+
+**Private exclusions:** hidden chain-of-thought, production economics/scoring logic, private policies, customer data, production routing, production authority topology and private connectors.
+
+### 016 — Neuruh Authority Delegation Contract
+
+**Repository:** https://github.com/NeuruhAI/neuruh-authority-delegation-contract
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 44/44 tests PASS; exact public Wave 06 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A fail-closed authority contract binding principal, delegate, authority classes, capabilities, domains, optional action IDs, time window, spend ceiling and delegation depth. Child delegations must be strict subsets of their parent and revoked/expired/out-of-scope authority fails closed.
+
+**Private exclusions:** production RBAC, real employee identities, cryptographic key material, credentials, production authority graph, private approval routing and private commercial thresholds.
+
+### Wave 06 aggregate qualification
+
+- **89/89 unit tests PASS**
+- **015: 45/45 PASS**
+- **016: 44/44 PASS**
+- **Exact public 006 → 013 → 016 → 014 → 015 → 009 composition E2E PASS**
+- **Delegation authorization PASS**
+- **Pre-approval block PASS; exact post-approval authorization PASS**
 - **2/2 wheel builds PASS**
 - **2/2 CLI smoke suites PASS**
 - **2/2 final Git histories gitleaks PASS**
