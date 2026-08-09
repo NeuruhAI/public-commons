@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Deployment Authorization Contract
-2. Neuruh Stage Transition Receipt
+1. Neuruh Authorization Consumption Ledger
+2. Neuruh Lifecycle State Ledger
 
 ## Registration rule
 
@@ -490,3 +490,62 @@ Critical boundary: the receipt records externally governed rollback evidence and
 - **No private organism implementation exported**
 
 Wave 09 makes failure recovery auditable without letting evaluation or receipt evidence become deployment or rollback authority.
+
+
+---
+
+## Release Wave 10 — Deployment Authorization + Stage Transition
+
+Wave 10 separates lifecycle eligibility from actual deployment authority, then records the externally executed stage transition as evidence.
+
+### 023 — Neuruh Deployment Authorization Contract
+
+**Repository:** https://github.com/NeuruhAI/neuruh-deployment-authorization-contract
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 57/57 tests PASS; exact public Wave 10 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic, single-use, time-bound authorization artifact binding one exact run/action/target/actor, authority class, capability, adjacent lifecycle transition, current/candidate state, learning proposal, Promotion Gate result, stage-evaluation evidence, human approval, authority delegation, reversibility contract and policy version.
+
+Critical boundary: this is the dedicated authority-bearing artifact and explicitly carries `deployment_authority=true`, but contains no deployment mechanism. A separate governed executor must authenticate the actor, verify every bound prerequisite and enforce this exact contract.
+
+**Private exclusions:** production actor identities, deployment capability map, credentials, infrastructure topology, production state, private policies, routing and executor implementation.
+
+### 024 — Neuruh Stage Transition Receipt
+
+**Repository:** https://github.com/NeuruhAI/neuruh-stage-transition-receipt
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 49/49 tests PASS; exact public Wave 10 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic receipt binding the exact Deployment Authorization to proposal, promotion, stage-evaluation evidence, pre-state, target state, external execution evidence, observed post-state and verification evidence for one adjacent forward lifecycle transition.
+
+Critical boundary: the receipt hard-codes `execution_authority=false`. A SUCCEEDED transition requires the observed post-state digest to equal the exact authorized target state. Rollback remains Release 022 rather than being overloaded into this receipt.
+
+**Private exclusions:** production deployment commands, rollout topology, credentials, real state stores, customer data, release policy and operational routing.
+
+### Wave 10 aggregate qualification
+
+- **106/106 unit tests PASS**
+- **023: 57/57 PASS**
+- **024: 49/49 PASS**
+- **Exact public 019 → 018 → 016 → 014 → 020 → 021 → 023 → 024 → 015 → 009 composition E2E PASS**
+- **Stage evaluation PASS prerequisite bound**
+- **Promotion Gate PROMOTE retains deployment_authority=false PASS**
+- **Authority delegation + exact human approval binding PASS**
+- **023 single-use/time-bound deployment_authority=true PASS**
+- **023 exact action/actor/state/stage binding PASS**
+- **024 exact target-state verification PASS**
+- **024 execution_authority=false PASS**
+- **Decision Receipt + Agent Run Manifest binding PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 10 establishes the narrow boundary where lifecycle eligibility becomes exact, consumable deployment authority and where the resulting lifecycle transition becomes auditable evidence.
