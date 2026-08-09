@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Learning Update Proposal
-2. Neuruh Promotion Gate
+1. Neuruh Canary Evaluation Ledger
+2. Neuruh Rollback Receipt
 
 ## Registration rule
 
@@ -374,3 +374,60 @@ Critical boundary: the contract validates whether a declared reversal/compensati
 - **No private organism implementation exported**
 
 Wave 07 adds measurable post-outcome calibration and pre-execution reversibility while preserving the rule that evidence does not acquire authority.
+
+
+---
+
+## Release Wave 08 — Learning Proposals + Promotion Gates
+
+Wave 08 turns calibration evidence into reviewable learning proposals and adds a deterministic lifecycle promotion gate without allowing evidence to mutate production state or acquire deployment authority.
+
+### 019 — Neuruh Learning Update Proposal
+
+**Repository:** https://github.com/NeuruhAI/neuruh-learning-update-proposal
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 47/47 tests PASS; exact public Wave 08 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound proposal that binds exact current/candidate target versions and digests, calibration ledger/summary evidence, sample count, hashed change descriptors and explicit metric projections.
+
+Critical boundary: the proposal can recommend a candidate update but contains no apply, deploy, shell, network, model-update, policy-update or authority-granting path. Human review and Promotion Gate evaluation are mandatory in v0.1.
+
+**Private exclusions:** model weights, private prompts/policies, proprietary scoring and thresholds, customer data, production calibration rules, routing logic and deployment systems.
+
+### 020 — Neuruh Promotion Gate
+
+**Repository:** https://github.com/NeuruhAI/neuruh-promotion-gate
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 49/49 tests PASS; exact public Wave 08 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A fail-closed lifecycle eligibility gate that evaluates proposal identity, target/stage allowlists, calibration sample count, test evidence, regressions, human approval and reversibility evidence and returns PROMOTE, HOLD or BLOCK.
+
+Critical boundary: PROMOTE means eligible to progress to the requested lifecycle stage. Promotion decisions hard-code `deployment_authority=false`; the gate never deploys or mutates a target.
+
+**Private exclusions:** production promotion thresholds, release policy, model selection, production stage routing, credentials, customer data and deployment topology.
+
+### Wave 08 aggregate qualification
+
+- **96/96 unit tests PASS**
+- **019: 47/47 PASS**
+- **020: 49/49 PASS**
+- **Exact public 017 → 019 → 018 → 014 → 020 → 015 → 009 composition E2E PASS**
+- **Calibration evidence → proposal binding PASS**
+- **Pre-approval Promotion Gate HOLD PASS**
+- **Exact human approval binding PASS**
+- **Reversibility prerequisite binding PASS**
+- **Post-approval Promotion Gate PROMOTE eligibility PASS**
+- **Deployment authority remains false PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 08 establishes a bounded learning loop: measure error, propose change, obtain independent prerequisites, and evaluate lifecycle eligibility without self-modification or autonomous deployment.
