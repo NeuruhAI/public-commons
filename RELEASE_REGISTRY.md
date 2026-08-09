@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Decision Explainability
-2. Neuruh Human Approval Checkpoint
+1. Neuruh Decision Receipt
+2. Neuruh Authority Delegation Contract
 
 ## Registration rule
 
@@ -231,4 +231,47 @@ production authority topology.
 
 Wave 04 extends the governed reference runtime with evidence custody and
 connector-boundary verification.
+
+---
+
+## Release Wave 05 — Explainability + Human Authority
+
+Wave 05 makes governed decisions auditable without exposing chain-of-thought, then binds human approval to one exact decision/evidence/policy/run state.
+
+### 013 — Neuruh Decision Explainability
+
+**Repository:** https://github.com/NeuruhAI/neuruh-decision-explainability
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 36/36 tests PASS; exact public Wave 05 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic content-bound audit explanation recording the chosen decision, declared policy reasons, hashed evidence used/excluded, rejected alternatives and limitations. It does not request, store or reconstruct hidden model chain-of-thought.
+
+**Private exclusions:** chain-of-thought, model scratchpads, private prompts/policies, production thresholds, proprietary scoring, customer data, routing and authority topology.
+
+### 014 — Neuruh Human Approval Checkpoint
+
+**Repository:** https://github.com/NeuruhAI/neuruh-human-approval-checkpoint
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 38/38 tests PASS; exact public Wave 05 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A fail-closed human approval record bound to exact run/action identity, decision digest, policy version, evidence digest, authorized approver set, required authority and expiry. Changed state, stale approvals, unauthorized approvers and replay attempts fail closed.
+
+**Private exclusions:** real employee identities, production RBAC/authority topology, credentials, production approval routing, customer data, private policies and execution systems.
+
+### Wave 05 aggregate qualification
+
+- **74/74 unit tests PASS**
+- **Exact public 006 Policy Gate → 013 → 014 → 009 Agent Run Manifest composition E2E PASS**
+- **Pre-approval authorization blocked; exact post-approval state authorized**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
 
