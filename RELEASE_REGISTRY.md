@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Agent Run Manifest
-2. Neuruh Sovereign Agent Starter
+1. Neuruh Evidence Ledger
+2. Neuruh Connector Contract Kit
 
 ## Registration rule
 
@@ -102,3 +102,71 @@ authority configuration.
 Wave 02 principle:
 
 > **Open the rails. Protect the routing intelligence.**
+
+---
+
+## Release Wave 03 — Composition
+
+Wave 03 composes the Public Commons primitives into a reproducible governed
+agent run and a runnable sovereign reference agent.
+
+### 009 — Neuruh Agent Run Manifest
+
+**Repository:** https://github.com/NeuruhAI/neuruh-agent-run-manifest  
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
+**Class:** A — Public Commons  
+**Status:** Public / Active Alpha  
+**Qualification:** 20/20 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic, content-bound manifest for governed agent runs. It binds
+run and actor identity, mission, timestamps, component versions, policy
+identity/version, inference state, content-hashed artifacts, evidence,
+decisions, execution references, Agent Receipt references and a deterministic
+manifest digest.
+
+Validation fails closed on malformed hashes, unknown fields, duplicate IDs,
+broken references, inconsistent policy versions, invalid receipt sequencing,
+impossible timestamps, status contradictions and manifest tampering.
+
+**Private exclusions:** production routing, production authority topology,
+private prompts/policies/memory, proprietary scoring/recipes, customer data
+and private connectors.
+
+### 010 — Neuruh Sovereign Agent Starter
+
+**Repository:** https://github.com/NeuruhAI/neuruh-sovereign-agent-starter  
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`  
+**Class:** A — Public Commons  
+**Status:** Public / Active Alpha  
+**Qualification:** 22/22 tests PASS; synthetic governed E2E PASS; generated Release 009 manifest independently validates; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A runnable governed-agent reference stack composed from Agent Receipt,
+Governed Exec, Policy Gate, Capability Registry, Inference Health and Agent
+Run Manifest.
+
+Critical safety property:
+
+> **Model output is evidence, never command authority.**
+
+Execution is restricted to an exact operator-declared executable + argv
+binding after capability validation and policy evaluation. DENY and ESCALATE
+do not execute. v0.1 inference is loopback-only.
+
+**Private exclusions:** AXON, AEGIS/IAR, Governance Core, Mother/Father,
+LandOS, Recipe Engine, DeedSonar, production authority topology, private
+routing, private prompts/policies/memory and proprietary scoring.
+
+### Wave 03 aggregate qualification
+
+- **2 independently runnable Public Commons packages**
+- **42/42 unit tests PASS**
+- **Synthetic governed E2E PASS**
+- **E2E Release 009 manifest independently verified**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **No private organism implementation exported**
+
+Wave 03 advances the Public Commons from standalone runnable primitives into
+a composed governed reference runtime.
+
