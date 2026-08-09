@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Authorization Consumption Ledger
-2. Neuruh Lifecycle State Ledger
+1. Neuruh Execution Intent Manifest
+2. Neuruh State Attestation Envelope
 
 ## Registration rule
 
@@ -549,3 +549,64 @@ Critical boundary: the receipt hard-codes `execution_authority=false`. A SUCCEED
 - **No private organism implementation exported**
 
 Wave 10 establishes the narrow boundary where lifecycle eligibility becomes exact, consumable deployment authority and where the resulting lifecycle transition becomes auditable evidence.
+
+
+---
+
+## Release Wave 11 — Authority Consumption + Canonical Lifecycle State
+
+Wave 11 closes two post-authorization custody gaps: it retires single-use deployment authority exactly once, and it makes each target's lifecycle stage/state a canonical append-only record rather than something inferred from scattered receipts.
+
+### 025 — Neuruh Authorization Consumption Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-authorization-consumption-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 54/54 tests PASS; exact public Wave 11 composition E2E PASS; replay rejection PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+An append-only tamper-evident ledger that permanently retires one exact Release 023 authorization digest as either consumed or voided. A consumed entry is bound to a pre-execution execution-intent digest; a voided entry is retired without execution and requires an explicit reason.
+
+Critical boundary: consumption evidence hard-codes `authority_retired=true` and `deployment_authority=false`. Duplicate authorization IDs and digests are rejected across the full history. This public primitive does not pretend to be a distributed lock: production atomic consumption storage and concurrency control remain private executor responsibilities.
+
+**Private exclusions:** production atomic authority store, distributed locks, actor identities, credentials, executor implementation, production targets, private authority topology, customer state and deployment routing.
+
+### 026 — Neuruh Lifecycle State Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-lifecycle-state-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 75/75 tests PASS; exact public Wave 11 composition E2E PASS; canonical state/replay tests PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A canonical append-only hash-chained ledger for a target's exact lifecycle stage and state digest. Forward transitions advance exactly one adjacent stage and bind both the Release 024 Stage Transition Receipt and the immutable specific Release 025 consumption-entry digest. Rollback entries bind Release 022 rollback evidence and move only to an earlier lifecycle stage.
+
+Critical boundary: lifecycle state evidence hard-codes `execution_authority=false`. The ledger rejects stale previous stages/states, transition-receipt reuse, consumption-entry reuse, rollback-receipt reuse, chain breaks, timestamp regression and target mutation.
+
+**Private exclusions:** production state store, deployment/rollback commands, credentials, infrastructure topology, customer data, actor identity, private policies, observation agents and routing.
+
+### Wave 11 aggregate qualification
+
+- **129/129 unit tests PASS**
+- **025: 54/54 PASS**
+- **026: 75/75 PASS**
+- **Exact public 023 → 025 → 024 → 026 → 015 → 009 composition E2E PASS**
+- **023 exact deployment_authority=true and single-use binding PASS**
+- **025 exact authorization retirement PASS**
+- **025 duplicate/replay authorization rejection PASS**
+- **025 deployment_authority=false PASS**
+- **024 exact externally executed adjacent stage transition PASS**
+- **026 canonical current stage/state PASS**
+- **026 stale from-stage/pre-state rejection PASS**
+- **026 transition receipt / consumption entry / rollback receipt reuse rejection PASS**
+- **026 execution_authority=false PASS**
+- **Decision Receipt + Agent Run Manifest binding PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 11 turns single-use authorization into auditable retirement and turns lifecycle position into explicit canonical state without exporting the production coordination machinery.
