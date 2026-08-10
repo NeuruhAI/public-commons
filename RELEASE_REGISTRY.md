@@ -11,8 +11,7 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Canonical State Revision Ledger
-2. Neuruh Effective Canonical State Resolver
+Empty. Wave 16 consumed the queue (035/036). Per the 001–036 architecture audit, no future release numbers are reserved; the next queue entry requires a founder decision on audit findings K-1/K-2.
 
 ## Registration rule
 
@@ -852,3 +851,51 @@ The canonical-state revision authority boundary was narrowed after post-release 
 - **034 cross-stage canonical revision receipt rejection PASS**
 - **Same-stage Wave 15 composition remains PASS**
 - **Release numbers remain 033–034; this is a hardening patch, not a new primitive wave**
+
+---
+
+## Release Wave 16 — Canonical Revision Lineage and Effective Truth
+
+Wave 16 turns Wave 15's canonical-revision evidence into durable memory and collapses lifecycle canonical state plus revision evidence into one deterministic, fail-closed projection of effective canonical truth.
+
+**Publication status: locally qualified; GitHub repository creation and final merge are founder-gated. Sealed package `Neuruh_Public_Commons_Wave_16_v0.1.0-alpha`, tarball SHA256 `a3ed07c4a629863b5bfe830c5d4459a561d8bde2d5f75705da2566f9f419a99c`.**
+
+### 035 — Neuruh Canonical State Revision Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-ledger *(pending founder authorization)*
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Qualified / Publication pending founder authorization
+**Qualification:** 35/35 tests PASS; exact public Wave 16 composition E2E PASS; wheel and CLI smoke PASS; Git-history gitleaks PASS; Apache-2.0; release receipt present; tested source commit `6cd3104ea59ff4b784de9e0551d6ce2f685391b0`, final head `a4be39145b7699fb2d4632e97b7f99b0184dc703`.
+
+An append-only, hash-chained memory of canonical-state revisions. Each lineage is bound to exactly one Release 026 lifecycle anchor and consumes each successful Release 034 receipt and bound Release 033 authorization at most once, threading every revision from the previous effective canonical state.
+
+Critical boundary: 035 is memory, not power. It hard-codes `lifecycle_ledger_mutated=false` and every authority flag false, including `lifecycle_transition_authority` and generic `mutation_authority`. A lifecycle-stage change is unrepresentable in its schema; failed receipts and stale lifecycle anchors are rejected fail-closed.
+
+### 036 — Neuruh Effective Canonical State Resolver
+
+**Repository:** https://github.com/NeuruhAI/neuruh-effective-canonical-state-resolver *(pending founder authorization)*
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Qualified / Publication pending founder authorization
+**Qualification:** 33/33 tests PASS; exact public Wave 16 composition E2E PASS; wheel and CLI smoke PASS; Git-history gitleaks PASS; Apache-2.0; release receipt present; tested source commit `e9723f02c0f85e291623b183e4761900ad0944f9`, final head `19bffea28f0146fbe60df2977710736c42867e7b`.
+
+A deterministic, read-only projection answering "what is the effective canonical state now?" from the current Release 026 lifecycle tip plus zero or more Release 035 lineages, which it independently re-verifies. A revision lineage is valid only against the exact lifecycle tip it was anchored to; a newer legitimate lifecycle transition supersedes stale-anchored revisions.
+
+Critical boundary: 036 is a resolver, not an authority. Every authority flag is hard-false; ambiguity (missing evidence, competing tips, forked lineage, anchor mismatch) is a terminal truth-free outcome — never a best guess. Resolutions are content-bound (`evidence_digest`, `resolution_digest`) and replay identically regardless of input order.
+
+### Wave 16 aggregate qualification
+
+- **68/68 unit tests PASS** (035: 35/35; 036: 33/33)
+- **Exact public 026 → 029 → 030 → 033 → 025 → 034 → 035 → 036 composition E2E PASS**
+- **Tip-A revision resolves via revision tip PASS**
+- **Legitimate lifecycle transition to tip B supersedes stale tip-A revision PASS**
+- **Valid B-anchored revision resolves as effective truth PASS**
+- **NEGATIVE: pilot/state-A → production/state-B via canonical revision blocked at 033, 034, 035 and 036 PASS**
+- **Hash-consistent cross-stage forgery fails closed (`LIFECYCLE_ANCHOR_CONTENT_MISMATCH`) PASS**
+- **2/2 wheel builds PASS; 2/2 CLI smoke suites PASS**
+- **2/2 Git histories gitleaks PASS; public-commons full history (51 commits) gitleaks PASS**
+- **2/2 Apache-2.0; 2/2 release receipts present; synthetic fixtures only**
+- **No private organism implementation exported**
+
+With 036, the split between lifecycle canonical state and revised canonical truth becomes a deterministic projection instead of two competing facts. Per `PUBLIC_COMMONS_001_036_ARCHITECTURE_AUDIT_20260810.md`, no release numbers beyond 036 are assigned; future work requires a founder decision on the audit's K-1/K-2 findings.
