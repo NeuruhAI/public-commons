@@ -798,10 +798,10 @@ Wave 15 governs the separate authority domain required to change canonical truth
 ### 033 — Neuruh Canonical State Revision Authorization Contract
 
 **Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-authorization-contract
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
-**Qualification:** 28/28 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+**Qualification:** 29/29 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A deterministic, single-use, time-bound `adopt_observed` authority contract binding the exact Release 030 proposal, Release 029 drift evidence, source attestation, current Release 026 lifecycle-entry digest, current canonical state, observed state, exact target canonical state, actor/capability, approval, delegation, reversibility contract and policy version.
 
@@ -810,10 +810,10 @@ Critical boundary: 033 carries `canonical_state_revision_authority=true` while `
 ### 034 — Neuruh Canonical State Revision Receipt
 
 **Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-receipt
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
-**Qualification:** 28/28 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+**Qualification:** 29/29 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
 
 A deterministic evidence receipt binding the exact Release 033 authority, Release 030 proposal, Release 029 drift evidence, prior canonical lifecycle entry, pre-canonical state, exact revision target, canonical-store write evidence, post-canonical record, verification evidence and single-use index.
 
@@ -821,9 +821,9 @@ Critical boundary: 034 hard-codes `lifecycle_ledger_mutated=false` and carries n
 
 ### Wave 15 aggregate qualification
 
-- **56/56 unit tests PASS**
-- **033: 28/28 PASS**
-- **034: 28/28 PASS**
+- **58/58 unit tests PASS**
+- **033: 29/29 PASS**
+- **034: 29/29 PASS**
 - **Exact public 029 → 030 → 033 → 025 → 034 composition E2E PASS**
 - **029 exact drift evidence PASS**
 - **030 adopt_observed proposal PASS**
@@ -843,3 +843,12 @@ Critical boundary: 034 hard-codes `lifecycle_ledger_mutated=false` and carries n
 - **No private organism implementation exported**
 
 Wave 15 separates changing canonical truth from restoring runtime state. The next public layer must establish revision lineage and resolve an effective canonical state across Release 026 lifecycle history plus canonical revision evidence.
+
+### Wave 15 hardening v0.1.1-alpha
+
+The canonical-state revision authority boundary was narrowed after post-release architecture review. Release 033 now rejects any `adopt_observed` request whose observed stage differs from the current canonical lifecycle stage, and Release 034 rejects any receipt whose target canonical stage differs from its pre-canonical stage. This makes canonical revision explicitly state-only and preserves lifecycle-stage changes for the separate lifecycle transition authority path.
+
+- **033 cross-stage canonical revision rejection PASS**
+- **034 cross-stage canonical revision receipt rejection PASS**
+- **Same-stage Wave 15 composition remains PASS**
+- **Release numbers remain 033–034; this is a hardening patch, not a new primitive wave**
