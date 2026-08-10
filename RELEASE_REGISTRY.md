@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Canonical State Revision Authorization Contract
-2. Neuruh Canonical State Revision Receipt
+1. Neuruh Canonical State Revision Ledger
+2. Neuruh Effective Canonical State Resolver
 
 ## Registration rule
 
@@ -787,3 +787,59 @@ Critical boundary: a successful receipt requires exact target-state equality and
 - **No private organism implementation exported**
 
 Wave 14 proves that restoring runtime state to canonical truth can be governed, single-use, auditable and independently re-verified without letting remediation evidence become reusable authority.
+
+
+---
+
+## Release Wave 15 — Canonical State Revision Authority + Receipt
+
+Wave 15 governs the separate authority domain required to change canonical truth itself. It permits one exact approved `adopt_observed` revision, retires that authority through Release 025, and records the externally applied canonical-store revision without pretending Release 026 was mutated.
+
+### 033 — Neuruh Canonical State Revision Authorization Contract
+
+**Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-authorization-contract
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 28/28 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic, single-use, time-bound `adopt_observed` authority contract binding the exact Release 030 proposal, Release 029 drift evidence, source attestation, current Release 026 lifecycle-entry digest, current canonical state, observed state, exact target canonical state, actor/capability, approval, delegation, reversibility contract and policy version.
+
+Critical boundary: 033 carries `canonical_state_revision_authority=true` while `deployment_authority=false`, `execution_authority=false`, `reconciliation_authority=false`, and `lifecycle_transition_authority=false`.
+
+### 034 — Neuruh Canonical State Revision Receipt
+
+**Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-receipt
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 28/28 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic evidence receipt binding the exact Release 033 authority, Release 030 proposal, Release 029 drift evidence, prior canonical lifecycle entry, pre-canonical state, exact revision target, canonical-store write evidence, post-canonical record, verification evidence and single-use index.
+
+Critical boundary: 034 hard-codes `lifecycle_ledger_mutated=false` and carries no canonical-state, execution, deployment, reconciliation or reusable revision authority. It is not a Release 026 lifecycle entry.
+
+### Wave 15 aggregate qualification
+
+- **56/56 unit tests PASS**
+- **033: 28/28 PASS**
+- **034: 28/28 PASS**
+- **Exact public 029 → 030 → 033 → 025 → 034 composition E2E PASS**
+- **029 exact drift evidence PASS**
+- **030 adopt_observed proposal PASS**
+- **033 canonical_state_revision_authority=true / single-use / time-bound PASS**
+- **033 cross-domain authority flags=false PASS**
+- **025 exact 033 authority retirement PASS**
+- **025 replay rejection PASS**
+- **034 exact target canonical state verification PASS**
+- **034 lifecycle_ledger_mutated=false PASS**
+- **034 evidence authority flags=false PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 15 separates changing canonical truth from restoring runtime state. The next public layer must establish revision lineage and resolve an effective canonical state across Release 026 lifecycle history plus canonical revision evidence.
