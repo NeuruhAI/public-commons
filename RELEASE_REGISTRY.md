@@ -11,8 +11,8 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 ## Queue
 
-1. Neuruh Reconciliation Authorization Contract
-2. Neuruh Reconciliation Receipt
+1. Neuruh Canonical State Revision Authorization Contract
+2. Neuruh Canonical State Revision Receipt
 
 ## Registration rule
 
@@ -730,3 +730,60 @@ Critical boundary: proposals hard-code `approval_required=true`, `deployment_aut
 - **No private organism implementation exported**
 
 Wave 13 makes state drift measurable and response proposals auditable while preserving the boundary that observation and recommendation do not become authority.
+
+
+---
+
+## Release Wave 14 — Reconciliation Authority + Receipt
+
+Wave 14 closes the restore-canonical remediation path: an exact drift-bound proposal receives one narrow single-use reconciliation authority, that authority is retired through the existing Authorization Consumption Ledger, and the externally governed remediation is recorded as evidence before independent attestation confirms the system is back in sync.
+
+### 031 — Neuruh Reconciliation Authorization Contract
+
+**Repository:** https://github.com/NeuruhAI/neuruh-reconciliation-authorization-contract
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 27/27 tests PASS; exact public Wave 14 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic single-use, time-bound authority contract binding exact run/action/target/actor identity, Release 030 proposal, Release 029 drift entry, state attestation, authority/capability, canonical/observed state, exact restore target, approval, delegation, reversibility contract and policy version.
+
+Critical boundary: 031 carries `reconciliation_authority=true` but hard-codes `deployment_authority=false`, `execution_authority=false` and `canonical_state_authority=false`. v0.1 authorizes `restore_canonical` only. `adopt_observed` is deliberately excluded because changing canonical truth is a separate authority domain.
+
+### 032 — Neuruh Reconciliation Receipt
+
+**Repository:** https://github.com/NeuruhAI/neuruh-reconciliation-receipt
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 22/22 tests PASS; exact public Wave 14 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+
+A deterministic receipt binding the exact Release 031 authority, Release 030 proposal, Release 029 drift entry, pre-state, authorized restore target, execution evidence, observed post-state, verification evidence, status, chronology and authorization use index.
+
+Critical boundary: a successful receipt requires exact target-state equality and hard-codes `execution_authority=false`, `canonical_state_authority=false`, and `reconciliation_authority=false`.
+
+### Wave 14 aggregate qualification
+
+- **49/49 unit tests PASS**
+- **031: 27/27 PASS**
+- **032: 22/22 PASS**
+- **Exact public 029 → 030 → 031 → 025 → 032 → 028 → 029 composition E2E PASS**
+- **Pre-reconciliation 029 status = drifted PASS**
+- **030 restore-canonical proposal binding PASS**
+- **031 reconciliation_authority=true / single-use / time-bound PASS**
+- **031 adopt_observed rejected as wrong authority domain PASS**
+- **025 retires exact 031 authorization PASS**
+- **025 duplicate consumption/replay rejection PASS**
+- **032 successful post-state must equal exact restore target PASS**
+- **028 post-reconciliation state attestation = MATCH PASS**
+- **Post-reconciliation 029 status = in_sync PASS**
+- **032 execution/canonical/reconciliation authority = false PASS**
+- **2/2 wheel builds PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0**
+- **2/2 release receipts present**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+Wave 14 proves that restoring runtime state to canonical truth can be governed, single-use, auditable and independently re-verified without letting remediation evidence become reusable authority.
