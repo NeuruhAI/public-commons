@@ -4,15 +4,14 @@ This registry tracks approved public Neuruh primitives. Each project remains ind
 
 | Release | Repository / Artifact | Version | Class | Status | Purpose |
 |---|---|---:|---|---|---|
-| 001 | `NeuruhAI/agent-receipt` | 0.1.0 | A — Public Commons | Public / Active Alpha | Portable tamper-evident agent receipt specification and verifier |
+| 001 | `NeuruhAI/agent-receipt` | 0.1.2a0 | A — Public Commons | Public / Active Alpha | Portable tamper-evident agent receipt specification and verifier |
 | 002 | `specs/SINGLE_WRITER_SPEC.md` | 0.1 | A — Public Commons | Public / Active Alpha | Single authoritative writer contract for canonical mutable domains |
 | 003 | `specs/EVIDENCE_ENVELOPE_SPEC.md` | 0.1 | A — Public Commons | Public / Active Alpha | Portable evidence, provenance, contradiction, uncertainty, and abstention envelope |
 | 004 | `failure-lab/` | 0.1 | A — Public Commons | Public / Active Alpha | Synthetic negative-test pack proving invalid contract states are rejected |
 
 ## Queue
 
-1. Neuruh Canonical State Revision Ledger
-2. Neuruh Effective Canonical State Resolver
+Empty. Releases 035 and 036 were the last queued items and are published below.
 
 ## Registration rule
 
@@ -28,7 +27,7 @@ bounded, independently runnable reference components.
 ### 005 — Neuruh Governed Exec
 
 **Repository:** https://github.com/NeuruhAI/neuruh-governed-exec
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 8/8 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -43,7 +42,7 @@ authority topology, private policies and Neuruh production runtime integration.
 ### 006 — Neuruh Policy Gate
 
 **Repository:** https://github.com/NeuruhAI/neuruh-policy-gate
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 7/7 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -58,7 +57,7 @@ commercial rules and production routing intelligence.
 ### 007 — Neuruh Capability Registry
 
 **Repository:** https://github.com/NeuruhAI/neuruh-capability-registry
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 7/7 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -72,7 +71,7 @@ real authority topology and privileged production capabilities.
 ### 008 — Neuruh Inference Health
 
 **Repository:** https://github.com/NeuruhAI/neuruh-inference-health
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 7/7 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -113,7 +112,7 @@ agent run and a runnable sovereign reference agent.
 ### 009 — Neuruh Agent Run Manifest
 
 **Repository:** https://github.com/NeuruhAI/neuruh-agent-run-manifest
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 20/20 tests PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -135,7 +134,7 @@ and private connectors.
 ### 010 — Neuruh Sovereign Agent Starter
 
 **Repository:** https://github.com/NeuruhAI/neuruh-sovereign-agent-starter
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 22/22 tests PASS; synthetic governed E2E PASS; generated Release 009 manifest independently validates; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -180,7 +179,7 @@ connector contract-testing primitive to the Public Commons.
 ### 011 — Neuruh Evidence Ledger
 
 **Repository:** https://github.com/NeuruhAI/neuruh-evidence-ledger
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 28/28 tests PASS; Wave 04 composition E2E PASS; final Git-history gitleaks PASS; wheel build PASS; CLI smoke PASS; Apache-2.0; release receipt present.
@@ -199,7 +198,7 @@ confidence calibration and private routing intelligence.
 ### 012 — Neuruh Connector Contract Kit
 
 **Repository:** https://github.com/NeuruhAI/neuruh-connector-contract-kit
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 29/29 tests PASS; Wave 04 composition E2E PASS; final Git-history gitleaks PASS; wheel build PASS; CLI smoke PASS; Apache-2.0; release receipt present.
@@ -241,7 +240,7 @@ Wave 05 makes governed decisions auditable without exposing chain-of-thought, th
 ### 013 — Neuruh Decision Explainability
 
 **Repository:** https://github.com/NeuruhAI/neuruh-decision-explainability
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 36/36 tests PASS; exact public Wave 05 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -253,7 +252,7 @@ A deterministic content-bound audit explanation recording the chosen decision, d
 ### 014 — Neuruh Human Approval Checkpoint
 
 **Repository:** https://github.com/NeuruhAI/neuruh-human-approval-checkpoint
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 38/38 tests PASS; exact public Wave 05 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -283,7 +282,7 @@ Wave 06 binds the complete auditable anatomy of one governed decision and adds a
 ### 015 — Neuruh Decision Receipt
 
 **Repository:** https://github.com/NeuruhAI/neuruh-decision-receipt
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 45/45 tests PASS; exact public Wave 06 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -295,7 +294,7 @@ A deterministic content-bound receipt spanning identity, evidence, declared reas
 ### 016 — Neuruh Authority Delegation Contract
 
 **Repository:** https://github.com/NeuruhAI/neuruh-authority-delegation-contract
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 44/44 tests PASS; exact public Wave 06 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -329,7 +328,7 @@ Wave 07 closes two critical trust loops: it records whether pre-outcome probabil
 ### 017 — Neuruh Outcome Calibration Ledger
 
 **Repository:** https://github.com/NeuruhAI/neuruh-outcome-calibration-ledger
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 57/57 tests PASS; exact public Wave 07 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -343,7 +342,7 @@ Critical boundary: calibration evidence can measure error but cannot modify mode
 ### 018 — Neuruh Reversibility Contract
 
 **Repository:** https://github.com/NeuruhAI/neuruh-reversibility-contract
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 54/54 tests PASS; exact public Wave 07 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -385,7 +384,7 @@ Wave 08 turns calibration evidence into reviewable learning proposals and adds a
 ### 019 — Neuruh Learning Update Proposal
 
 **Repository:** https://github.com/NeuruhAI/neuruh-learning-update-proposal
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 47/47 tests PASS; exact public Wave 08 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -399,7 +398,7 @@ Critical boundary: the proposal can recommend a candidate update but contains no
 ### 020 — Neuruh Promotion Gate
 
 **Repository:** https://github.com/NeuruhAI/neuruh-promotion-gate
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 49/49 tests PASS; exact public Wave 08 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -442,7 +441,7 @@ Wave 09 closes the canary failure/recovery loop with deterministic evaluation ev
 ### 021 — Neuruh Canary Evaluation Ledger
 
 **Repository:** https://github.com/NeuruhAI/neuruh-canary-evaluation-ledger
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 56/56 tests PASS; exact public Wave 09 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -456,7 +455,7 @@ Critical boundary: canary evaluation evidence hard-codes `deployment_authority=f
 ### 022 — Neuruh Rollback Receipt
 
 **Repository:** https://github.com/NeuruhAI/neuruh-rollback-receipt
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 43/43 tests PASS; exact public Wave 09 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -501,7 +500,7 @@ Wave 10 separates lifecycle eligibility from actual deployment authority, then r
 ### 023 — Neuruh Deployment Authorization Contract
 
 **Repository:** https://github.com/NeuruhAI/neuruh-deployment-authorization-contract
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 57/57 tests PASS; exact public Wave 10 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -515,7 +514,7 @@ Critical boundary: this is the dedicated authority-bearing artifact and explicit
 ### 024 — Neuruh Stage Transition Receipt
 
 **Repository:** https://github.com/NeuruhAI/neuruh-stage-transition-receipt
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 49/49 tests PASS; exact public Wave 10 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -560,7 +559,7 @@ Wave 11 closes two post-authorization custody gaps: it retires single-use deploy
 ### 025 — Neuruh Authorization Consumption Ledger
 
 **Repository:** https://github.com/NeuruhAI/neuruh-authorization-consumption-ledger
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 54/54 tests PASS; exact public Wave 11 composition E2E PASS; replay rejection PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -574,7 +573,7 @@ Critical boundary: consumption evidence hard-codes `authority_retired=true` and 
 ### 026 — Neuruh Lifecycle State Ledger
 
 **Repository:** https://github.com/NeuruhAI/neuruh-lifecycle-state-ledger
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 75/75 tests PASS; exact public Wave 11 composition E2E PASS; canonical state/replay tests PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -621,7 +620,7 @@ Wave 12 makes two previously opaque evidence links explicit: it turns the author
 ### 027 — Neuruh Execution Intent Manifest
 
 **Repository:** https://github.com/NeuruhAI/neuruh-execution-intent-manifest
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 72/72 tests PASS; exact public Wave 12 composition E2E PASS; authorization-window containment PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -635,7 +634,7 @@ Critical boundary: the intent hard-codes `deployment_authority=false` and `execu
 ### 028 — Neuruh State Attestation Envelope
 
 **Repository:** https://github.com/NeuruhAI/neuruh-state-attestation-envelope
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 55/55 tests PASS; exact public Wave 12 composition E2E PASS; expected-vs-observed mismatch rejection PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -684,7 +683,7 @@ Wave 13 closes the observed-state drift loop without granting remediation author
 ### 029 — Neuruh State Drift Ledger
 
 **Repository:** https://github.com/NeuruhAI/neuruh-state-drift-ledger
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 60/60 tests PASS; exact public Wave 13 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -696,7 +695,7 @@ Critical boundary: drift evidence hard-codes `deployment_authority=false`, `exec
 ### 030 — Neuruh Reconciliation Proposal
 
 **Repository:** https://github.com/NeuruhAI/neuruh-reconciliation-proposal
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 62/62 tests PASS; exact public Wave 13 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -741,7 +740,7 @@ Wave 14 closes the restore-canonical remediation path: an exact drift-bound prop
 ### 031 — Neuruh Reconciliation Authorization Contract
 
 **Repository:** https://github.com/NeuruhAI/neuruh-reconciliation-authorization-contract
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 27/27 tests PASS; exact public Wave 14 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -753,7 +752,7 @@ Critical boundary: 031 carries `reconciliation_authority=true` but hard-codes `d
 ### 032 — Neuruh Reconciliation Receipt
 
 **Repository:** https://github.com/NeuruhAI/neuruh-reconciliation-receipt
-**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 22/22 tests PASS; exact public Wave 14 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -798,7 +797,7 @@ Wave 15 governs the separate authority domain required to change canonical truth
 ### 033 — Neuruh Canonical State Revision Authorization Contract
 
 **Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-authorization-contract
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 29/29 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -810,7 +809,7 @@ Critical boundary: 033 carries `canonical_state_revision_authority=true` while `
 ### 034 — Neuruh Canonical State Revision Receipt
 
 **Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-receipt
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.2-alpha` / Python `0.1.2a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
 **Qualification:** 29/29 tests PASS; exact public Wave 15 composition E2E PASS; wheel and CLI smoke PASS; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
@@ -852,3 +851,110 @@ The canonical-state revision authority boundary was narrowed after post-release 
 - **034 cross-stage canonical revision receipt rejection PASS**
 - **Same-stage Wave 15 composition remains PASS**
 - **Release numbers remain 033–034; this is a hardening patch, not a new primitive wave**
+
+---
+
+## Release Wave 16 — Canonical Revision Memory and Effective Truth
+
+Wave 15 established the authority to change canonical state (033) and the receipt proving one
+such change was applied (034). Wave 16 adds the two pieces that make those events usable: a
+lineage that remembers them, and a projection that answers what is true now.
+
+### 035 — Neuruh Canonical State Revision Ledger
+
+**Repository:** https://github.com/NeuruhAI/neuruh-canonical-state-revision-ledger
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 35/35 tests PASS; clean-environment install PASS; CLI smoke PASS; documented
+output reproduced; full-history gitleaks PASS; Apache-2.0; release receipt present.
+
+An append-only, hash-chained memory of canonical-state revisions. Each lineage is anchored to
+exactly one Release 026 lifecycle entry and consumes exactly one successful Release 034 receipt
+per entry. A Release 034 receipt digest, and the Release 033 authorization digest bound to it,
+may each appear at most once in a lineage. Entries are state-only by construction: a
+lifecycle-stage change is unrepresentable as a revision entry, and a receipt anchored to a
+different lifecycle entry than the lineage anchor fails closed.
+
+Every authority flag is hard-coded false. Recording a revision grants nothing.
+
+**Private exclusions:** canonical state-store implementation, credentials, production lifecycle
+data, production revision history, policy routing and customer state.
+
+### 036 — Neuruh Effective Canonical State Resolver
+
+**Repository:** https://github.com/NeuruhAI/neuruh-effective-canonical-state-resolver
+**Version:** `v0.1.0-alpha` / Python `0.1.0a0`
+**Class:** A — Public Commons
+**Status:** Public / Active Alpha
+**Qualification:** 33/33 tests PASS; clean-environment install PASS; CLI smoke PASS; documented
+output reproduced; cross-component composition with 035 PASS; full-history gitleaks PASS;
+Apache-2.0; release receipt present.
+
+A deterministic, read-only projection from the current Release 026 lifecycle tip plus zero or
+more Release 035 revision lineages to one effective canonical state — or an explicit `ambiguous`
+outcome. A valid lineage anchored to the current tip wins; otherwise the tip itself is effective.
+A newer legitimate lifecycle transition supersedes revisions anchored to an older tip, which are
+classified `superseded_stale_anchor` and can never override the newer tip.
+
+Ambiguity is terminal and named: `MISSING_LIFECYCLE_EVIDENCE`, `AMBIGUOUS_COMPETING_TIPS`,
+`FORKED_REVISION_LINEAGE`, `LIFECYCLE_ANCHOR_CONTENT_MISMATCH`. Structurally invalid evidence is
+rejected rather than classified. There is no silent best guess.
+
+Every authority flag is hard-coded false, and the output carries the exact source digests used —
+`lifecycle_tip_digest`, `revision_tip_hash`, `evidence_digest` — so any consumer can re-derive
+the same answer.
+
+**Private exclusions:** canonical state-store implementation, production lifecycle ledgers,
+production revision history, credentials, policy routing, orchestration and customer state.
+
+### Wave 16 composition
+
+The Release 036 synthetic request embeds the Release 035 synthetic lineage, so the two are
+checked against each other rather than in isolation:
+
+```bash
+neuruh-canonical-state-revision-ledger digest examples/lineage.synthetic.jsonl
+# sha256:82ba56a7198a60a91662900ac7a02d9dbadb4a86648791070847aed5fbc5e8ce
+
+neuruh-effective-canonical-state-resolver resolve examples/resolve.request.synthetic.json
+# lineage_classifications[0].lineage_digest == the digest above
+# effective_state_digest == the ledger's effective_state_digest
+```
+
+- **035: 35/35 PASS**
+- **036: 33/33 PASS**
+- **035 → 036 lineage digest and effective-state digest agreement PASS**
+- **2/2 clean-environment installs from public tags PASS**
+- **2/2 CLI smoke suites PASS**
+- **2/2 documented outputs reproduced exactly PASS**
+- **2/2 final Git histories gitleaks PASS**
+- **2/2 Apache-2.0 with complete license text and NOTICE**
+- **2/2 release receipts present and bound to the release commit**
+- **Synthetic fixtures only**
+- **No private organism implementation exported**
+
+## Release hygiene pass — 2026-08-20
+
+Every published repository was reinstalled from its public tag in a clean environment, tested,
+and its documented output re-run and compared. The pass corrected defects that were present in
+earlier tags rather than adding capability:
+
+- `LICENSE` in Releases 033, 034, 035 and 036 carried the short Apache boilerplate notice rather
+  than the license text. All published repositories now ship the complete Apache-2.0 text and a
+  `NOTICE` file carrying the copyright line.
+- Packaging metadata moved off the deprecated `license = {text = "..."}` form to PEP 639
+  `license` / `license-files`, and every project now declares `readme`, authors and project URLs.
+- Packages now declare an explicit `__all__`, so `import *` no longer re-exports standard-library
+  names, and `__version__` is read from installed distribution metadata rather than a hard-coded
+  literal that could drift from `pyproject.toml`.
+- Every CLI now reports bad input as `error: ...` on stderr with exit `2`. All of them previously
+  printed a Python traceback for a missing or unreadable file.
+- `neuruh-evidence-ledger` reported `evidence_ids` from a `set`, so `inspect` printed them in a
+  different order on different runs. They now follow ledger order.
+- `neuruh-sovereign-agent-starter` pinned `neuruh-agent-receipt` to a raw commit SHA, and recorded
+  a hard-coded component-version list in the sealed manifest that had drifted from the released
+  versions. It now composes only immutable tags and records the versions that actually ran.
+- Every published repository now runs continuous integration on Python 3.11, 3.12 and 3.13.
+
+No validation rule, digest, or schema version changed in this pass.

@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install validator
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install jsonschema
+      - name: Failure lab — invalid fixtures must be rejected
+        run: python scripts/verify_failure_lab.py
+      - name: Estate Wave 01 contracts
+        run: python scripts/verify_estate_wave_01_contracts.py
+
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Every advertised repository, tag and version must exist
+        run: python scripts/verify_index.py
+        env:
+          GH_TOKEN: ${{ github.token }}
