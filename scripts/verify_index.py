@@ -7,7 +7,9 @@ release tag claimed for it, and verifies against GitHub that:
   * the repository is public;
   * the tag exists on the remote;
   * the package version at that tag matches the version the registry claims;
-  * a GitHub release exists for the tag.
+  * a GitHub release exists for the tag;
+  * that release is the newest one published for the repository, so the index cannot
+    quietly go on advertising a superseded release.
 
 Exits 0 when the index is accurate, 1 otherwise. Needs only git and network access;
 the GitHub CLI is used when available for the release and version checks.
@@ -114,16 +116,30 @@ def main() -> int:
             else:
                 detail.append(f"python {actual}")
 
-        releases = gh("release", "list", "-R", f"NeuruhAI/{repo}",
-                      "--limit", "50", "--json", "tagName", "-q", ".[].tagName")
-        if releases is None:
+        raw = gh("release", "list", "-R", f"NeuruhAI/{repo}",
+                 "--limit", "100", "--json", "tagName,publishedAt")
+        if raw is None:
             detail.append("release unchecked")
-        elif tag in releases.split():
-            detail.append("release present")
         else:
-            problems.append(f"{repo}: no GitHub release for {tag}")
-            print(f"FAIL {repo} {tag}")
-            continue
+            try:
+                releases = json.loads(raw)
+            except json.JSONDecodeError:
+                releases = []
+            names = [r["tagName"] for r in releases]
+            if tag not in names:
+                problems.append(f"{repo}: no GitHub release for {tag}")
+                print(f"FAIL {repo} {tag}")
+                continue
+            detail.append("release present")
+            newest = max(releases, key=lambda r: r.get("publishedAt") or "")
+            if newest["tagName"] != tag:
+                problems.append(
+                    f"{repo}: index advertises {tag}, but {newest['tagName']} "
+                    f"is the newest published release"
+                )
+                print(f"STALE {repo} {tag} -> {newest['tagName']}")
+                continue
+            detail.append("newest release")
 
         print(f"ok   {repo} {tag}" + (f"  ({', '.join(detail)})" if detail else ""))
 

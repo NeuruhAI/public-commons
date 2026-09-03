@@ -64,7 +64,7 @@ The `Stage` column is that package's position in the chain above.
 | execution | [`neuruh-governed-exec`](https://github.com/NeuruhAI/neuruh-governed-exec) | `v0.1.2-alpha` | 8 PASS | Exact-argv, no-shell execution contained inside approved worktrees |
 | receipt | [`agent-receipt`](https://github.com/NeuruhAI/agent-receipt) | `v0.1.2-alpha` | 7 PASS | Hash-chained execution receipts and a standalone CLI verifier |
 | run identity | [`neuruh-agent-run-manifest`](https://github.com/NeuruhAI/neuruh-agent-run-manifest) | `v0.1.2-alpha` | 20 PASS | Content-bound run manifests that can be validated independently |
-| composition | [`neuruh-sovereign-agent-starter`](https://github.com/NeuruhAI/neuruh-sovereign-agent-starter) | `v0.1.1-alpha` | 23 PASS | Runnable composition of the six libraries above |
+| composition | [`neuruh-sovereign-agent-starter`](https://github.com/NeuruhAI/neuruh-sovereign-agent-starter) | `v0.1.9-alpha` | 90 PASS | Runnable composition of the six libraries above |
 
 Each repository is independently versioned, tested, and installable. The core rule is
 simple: **model output is evidence, never command authority.**
@@ -140,10 +140,12 @@ without pulling a tree behind them. The one exception is
 `neuruh-sovereign-agent-starter`, whose six dependencies are the core libraries above,
 each pinned to an immutable tag.
 
-Test totals in the tables above were produced by running each repository's own suite
-(`python -m unittest discover -s tests`): **1,269 tests across the 33 Python packages, all
-passing.** `notion-auto-exporter` adds 16 Node tests. Every repository runs the same suite
-in CI on push and pull request.
+Test totals in the tables above were produced by running each repository's own suite at the
+tag this index advertises. These packages use a `src/` layout, so run the suite with the
+package importable (`PYTHONPATH=src python -m unittest discover -s tests`), or `pip install`
+the package first: **1,336 tests across the 33 Python packages, all passing.**
+`notion-auto-exporter` adds 16 Node tests. Every repository runs the same suite in CI on
+push and pull request.
 
 ## Installing a pinned release
 
