@@ -134,10 +134,10 @@ and private connectors.
 ### 010 — Neuruh Sovereign Agent Starter
 
 **Repository:** https://github.com/NeuruhAI/neuruh-sovereign-agent-starter
-**Version:** `v0.1.1-alpha` / Python `0.1.1a0`
+**Version:** `v0.1.9-alpha` / Python `0.1.9a0`
 **Class:** A — Public Commons
 **Status:** Public / Active Alpha
-**Qualification:** 22/22 tests PASS; synthetic governed E2E PASS; generated Release 009 manifest independently validates; final Git-history gitleaks PASS; Apache-2.0; release receipt present.
+**Qualification:** 90/90 tests PASS; synthetic governed E2E PASS; generated Release 009 manifest independently validates; final Git-history gitleaks PASS; Apache-2.0; release receipt present. Clean-room re-proof (2026-09-03): `pip install .` from a fresh clone of the published tag resolves all six pinned dependencies, and the stdio MCP server completes `initialize` -> `tools/list` -> `tools/call` over MCP newline-delimited framing, exposing three tools (`context_pack`, `cheap_route`, `proof_card`).
 
 A runnable governed-agent reference stack composed from Agent Receipt,
 Governed Exec, Policy Gate, Capability Registry, Inference Health and Agent
